@@ -1,0 +1,25 @@
+SyntaxError: C:\Users\ANNU\playwright-project\tests\HC.spec.js: Invalid shorthand property initializer. (13:34)
+
+[0m [90m 11 |[39m [36mawait[39m page[33m.[39mgetByRole([32m"button"[39m[33m,[39m{name[33m:[39m [32m'Submit'[39m})[33m.[39mclick()[33m;[39m
+ [90m 12 |[39m [36mawait[39m page[33m.[39mgetByText([32m"Success! The Form has been submitted successfully!."[39m)[33m.[39misVisible()[33m;[39m
+[31m[1m>[22m[39m[90m 13 |[39m [36mawait[39m page[33m.[39mgetByRole([32m"link"[39m[33m,[39m {name[33m=[39m[32m'Shop'[39m})[33m.[39mclick()[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 14 |[39m [36mawait[39m page[33m.[39mlocator([32m"app-card"[39m)[33m.[39mfilter({hasText[33m:[39m [32m'Nokia Edge'[39m})[33m.[39mgetByRole([32m"button"[39m)[33m.[39mclick()[33m;[39m
+ [90m 15 |[39m
+ [90m 16 |[39m[0m
+
+   at HC.spec.js:13
+
+  11 | await page.getByRole("button",{name: 'Submit'}).click();
+  12 | await page.getByText("Success! The Form has been submitted successfully!.").isVisible();
+> 13 | await page.getByRole("link", {name='Shop'}).click();
+     |                                  ^
+  14 | await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();
+  15 |
+  16 |
+
+[1A[2K
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
